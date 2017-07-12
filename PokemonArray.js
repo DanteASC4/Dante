@@ -13,6 +13,7 @@ console.log(myPokemonRoster);
 console.log(rosterSize);
 console.log(lastPokemon);
 console.log(myPokemonRoster[5]);
+console.log(lastPokemon.length - 1)
 
 for (var i = 0; i < myPokemonRoster.length; i++){
   console.log(myPokemonRoster[i]);
