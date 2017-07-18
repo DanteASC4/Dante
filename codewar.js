@@ -13,22 +13,35 @@ function alphabetPosition(str){
 
 
 //even better
+
+
 function alphabetPosition(text) {
   return text.toLowerCase().replace(/[^a-z]/g, '')
         .replace(/./g, ([c]) => ' ' + (c.charCodeAt(0) - 'a'.charCodeAt(0) + 1))
         .substr(1);
 }
 
-
-//Array combiner!
+//String character replacer
 
 function DNAStrand(dna){
-  dna.replace(/a/g, "t");
-  dna.replace(/t/g, "a");
-  dna.replace(/c/g, "g");
-  dna.replace(/g/g, "c");
-  return dna;
+    var compliment={
+        A : "T",
+        T : "A",
+        C : "G",
+        G : "C"
+    };
+    var dnaFinal = "";
+    if(dna.length >= 1){
+    for(var i in dna) {
+      dnaFinal = dnaFinal + compliment[dna[i]];
+    }
+
+    return dnaFinal;
 }
+}
+
+
+//Array combiner
 
 function bonelessPizzaOrder(order){
   var text ="A boneless pizza with";
@@ -45,4 +58,88 @@ function bonelessPizzaOrder(order){
     return "A boneless pizza with no toppings";
   }
   return text;
+}
+
+
+//Get all divisors of a integer
+
+function divisors(integer){
+  var factors = [],
+  quotient = 0;
+
+  for(var i = 1; i <= integer; i++){
+    quotient = integer/i;
+
+    if(quotient === Math.floor(quotient)){
+      factors.push(i);
+    }
+  }
+  return factors;
+}
+
+function divisors(integer){
+
+    var numDivisors = 1;
+    var factor = 2;
+
+    while (factor * factor <= integer) {
+        if (integer % factor === 0) {
+            var exponent = 0;
+            do {
+                integer /= factor;
+                exponent++;
+            } while (n % factor === 0)
+            numDivisors *= exponent + 1;
+            factor = factor == 2 ? 3 : factor + 2
+        }
+    }
+    if (integer > 1) {
+        numDivisors *= 2;
+    }
+
+    return numDivisors *= 2
+  }
+
+//Count duplicates in a String
+
+function duplicateCount(text) {
+var freq = {};
+for (var i=0; i<text.length;i++) {
+    var character = string.charAt(i);
+    if (freq[character]) {
+       freq[character]++;
+    } else {
+       freq[character] = 1;
+    }
+}
+return freq;
+};
+
+//Square every digit, return as number that is a combination not sum or product of all digits
+//E.g. squareDigits(9119) returns 811181
+
+function squareDigits(num){
+    output = [];
+    sNumber = num.toString();
+    result = [];
+
+for (var i = 0, len = sNumber.length; i < len; i += 1) {
+    output.push(+sNumber.charAt(i));
+    result.push(output[i] * output[i]);
+}
+result = result.join("");
+
+result = parseInt(result);
+return result;
+}
+
+//Tests if a number is prime
+
+function isPrime(num) {
+    for(var i = 2; i < num; i++) {
+        if(num % i === 0) {
+            return false;
+        }
+    }
+    return num > 1;
 }
