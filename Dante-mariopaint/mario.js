@@ -16,9 +16,6 @@ function setup(){
 
 
 
-
-
-
 function draw() {
   fill(r, g, b);
 
@@ -30,11 +27,12 @@ function draw() {
     var result = Math.floor(randNum);
     return result;
   }
-  fill(r, g, b);
   quad(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100), rand(100), rand(100), rand(100));
   ellipse(mouseX, mouseY, rand(100), rand(100));
   rect(mouseX, mouseY, rand(100), rand(100));
   triangle(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100));
+  fill(random(0, 225), random(0, 225), random(0, 225));
+
   return false;
 }
 /*
