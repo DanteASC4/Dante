@@ -1,8 +1,148 @@
 <DOCTYPE! html>
 <html>
-  <head>
+  <head id"everything">
+    <link rel="Stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js"></script>
     <script src="pokemonbattle.js"></script>
+    <script>
+    var pokeView = prompt("Which do you want to use to battle? zoroark, or deoxys? Type your choice exactly as shown.");
+    </script>
+    <button type="button" id="button">Dark Pulse</button>
+    <script>
+    document.getElementById('button').onclick = function pokeBattle(){
+            var opponentattack = 30;
+            var poketotalHp = 0;
+            var opponentHp = 70;
+            var opponenttotalHp = 70;
+
+
+            if(pokeView == "zoroark"){
+              pokeHp = 60;
+              poketotalHp = 60;
+
+            }
+            else {
+              pokeHp = 50;
+              poketotalHp = 50;
+            }
+
+            fill(0);
+            textSize(20);
+            text(pokeView + " attacked the enemy for 70 damage!",50,300)
+
+        if (opponentattack<pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + " has recieved 30 damage and now has " + (pokeHp - opponentattack) + " health left.",50,250);
+            pokeHp = pokeHp - opponentattack
+       }else if(opponentattack>pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + "has recieved fatal damage and has now fainted.")
+        }
+        fill(0)
+        textSize(20)
+        text( pokeView + ": " + pokeHp + "/" + poketotalHp ,200,400)
+        text( "Charmander: " + (opponentHp - 70) + "/" + opponenttotalHp, 1000, 400)
+    }
+    </script>
+    <button type="button" id="button1">Sucker Punch</button>
+    <script>
+    document.getElementById('button').onclick = function pokeBattle(){
+            var opponentattack = 30;
+            var poketotalHp = 0;
+            var opponentHp = 70;
+            var opponenttotalHp = 70;
+
+
+            if(pokeView == "zoroark"){
+              pokeHp = 60;
+              poketotalHp = 60;
+
+            }
+            else {
+              pokeHp = 50;
+              poketotalHp = 50;
+            }
+
+            fill(0);
+            textSize(20);
+            text(pokeView + " attacked the enemy for 120 damage!",50,300)
+
+        if (opponentattack<pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + " has recieved 30 damage and now has " + (pokeHp - opponentattack) + " health left.",50,250);
+            pokeHp = pokeHp - opponentattack
+       }else if(opponentattack>pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + "has recieved fatal damage and has now fainted.")
+        }
+        fill(0)
+        textSize(20)
+        text( pokeView + ": " + pokeHp + "/" + poketotalHp ,200,400)
+        text( "Charmander: " + (opponentHp - 120) + "/" + opponenttotalHp, 1000, 400)
+    }
+    </script>
+    <button type="button" id="button2">Hyper Beam</button>
+    <script>
+    document.getElementById('button').onclick = function pokeBattle(){
+            var opponentattack = 30;
+            var poketotalHp = 0;
+            var opponentHp = 70;
+            var opponenttotalHp = 70;
+
+
+            if(pokeView == "zoroark"){
+              pokeHp = 60;
+              poketotalHp = 60;
+
+            }
+            else {
+              pokeHp = 50;
+              poketotalHp = 50;
+            }
+
+            fill(0);
+            textSize(20);
+            text(pokeView + " attacked the enemy for 100 damage!",50,300)
+
+        if (opponentattack<pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + " has recieved 30 damage and now has " + (pokeHp - opponentattack) + " health left.",50,250);
+            pokeHp = pokeHp - opponentattack
+       }else if(opponentattack>pokeHp){
+            fill(0);
+            textSize(20);
+            text(pokeView + "has recieved fatal damage and has now fainted.")
+        }
+        fill(0)
+        textSize(20)
+        text( pokeView + ": " + pokeHp + "/" + poketotalHp ,200,400)
+        text( "Charmander: " + (opponentHp - 100) + "/" + opponenttotalHp, 1000, 400)
+    }
+    </script>
+    <script>
+    var img;
+
+
+    function setup(){
+      img = loadImage('http://i.imgur.com/sfKY3Tj.png');
+      createCanvas(1360, 600);
+      textSize(20);
+
+
+
+
+    }
+    function draw(){
+      background(img);
+
+    }
+    </script>
   </head>
   <body>
 <p> </p>
