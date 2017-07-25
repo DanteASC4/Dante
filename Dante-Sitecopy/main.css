@@ -1,0 +1,65 @@
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+    background-color: rgba(86, 86, 86, 1);
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+    background-color: rgba(86, 86, 86, 1);
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(86, 86, 86, 1);
+  }
+  .sidebar-nav .navbar li:hover{
+    background-color: rgba(255, 1, 1, 1);
+    color: #fff;
+  }
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #333;
+    border-radius: 6px;
+    background-color: #333;
+    width:1000px;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+}
+
+#custom-search-input button:hover{
+
+    box-shadow: none;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+input[type="text"]{
+  background-color: #333;
+}
+img{
+  margin: 5px 5px 5px 5px;
+}
+body{
+  background-color: #040406;
+}
