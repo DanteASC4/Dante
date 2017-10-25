@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD4qW5itGhy3DZl4GHy6djPCxLTE0_-lrE",
+      authDomain: "rock-paper-scissors-9db26.firebaseapp.com",
+      databaseURL: "https://rock-paper-scissors-9db26.firebaseio.com",
+      projectId: "rock-paper-scissors-9db26",
+      storageBucket: "",
+      messagingSenderId: "286219858961"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="Rps.js"></script>
+  <link href="rps.css" rel="stylesheet">
+</head>
+
+<body>
+  <form>
+    <p>Type your initials below, and press submit when you're done :D</p>
+    <p>Your initials: </p><input type="text" id="initials" maxlength="2">
+    <div class="GObutton">
+      <input id="submission" type="reset" onclick="updateData();" value="Submit">
+    </div>
+    <div class="GObutton">
+      <input id="reset" type="reset" onclick="updateData();" value="Submit">
+    </div>
+  </form>
+  <br>
+  <div class="image123">
+    <div class="imgContainer">
+      <center><img src="http://shop.wwe.com/on/demandware.static/-/Sites/default/dw29757933/images/slot/landing/superstar-landing/Superstar-Category_Superstar_562x408_theRock.png" height="200" width="200" /></center>
+      <p class="Stuff">Rock</p>
+      <button class="choice" id="rock" type="button">ROCK</button>
+    </div>
+
+    <div class="imgContainer">
+      <center><img src="http://pngimg.com/uploads/toilet_paper/toilet_paper_PNG18302.png" / height="200" width="200" /></center>
+      <p class="Stuff">Paper</p>
+      <button class="choice" id="paper" type="button">PAPER</button>
+    </div>
+
+    <div class="imgContainer">
+      <center><img src="http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/School-Clipart/Transparent_Scissors_PNG_Clipart_Picture.png?m=1422108873" / height="200" width="200" /></center>
+      <p class="Stuff">Scissors</p>
+      <button class="choice" id="scissors" type="button">SCISSORS</button>
+    </div>
+
+    <p id="win">You won </p>
+    <p id="lose">You took </p>
+    <p id="draw">You had </p>
+
+
+    <p id="equal">Recent player stats</p>
+
+    <div class="results" style="display:inline-block">
+
+
+    </div>
+
+
+</body>
+
+</html>

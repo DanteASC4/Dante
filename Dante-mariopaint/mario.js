@@ -7,7 +7,7 @@ function rand(num) {
 }
 
 function setup(){
-  createCanvas(1000, 1000);
+  createCanvas(2500, 1000);
   background(225);
   r = rand(225);
   g = rand(225);
@@ -27,10 +27,10 @@ function draw() {
     var result = Math.floor(randNum);
     return result;
   }
-  quad(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100), rand(100), rand(100), rand(100));
+  //quad(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100), rand(100), rand(100), rand(100));
   ellipse(mouseX, mouseY, rand(100), rand(100));
   rect(mouseX, mouseY, rand(100), rand(100));
-  triangle(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100));
+  //triangle(mouseX, mouseY, rand(100), rand(100), rand(100), rand(100));
   fill(random(0, 225), random(0, 225), random(0, 225));
 
   return false;

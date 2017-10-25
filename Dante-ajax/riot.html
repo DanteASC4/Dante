@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="riot.js"></script>
+
+
+</head>
+<body>
+
+<form>
+  <input id="target" type="text" name="summoner name"><br>
+</form>
+<script>
+
+
+var key = 'RGAPI-3f433b16-3375-432c-ac58-6aad17b7e867';
+
+
+
+$( 'input' ).on('keydown', function search(e) {
+  if(e.keyCode == 13){
+  var value = $( this ).val();
+}
+  var theURL = 'https://na1.api.riotgames.com/lol/summoners/by-name/' + value + '?api_key=' + key;
+  var urOne = theURL;
+  $.ajax({
+    type: 'GET',
+    dataType: 'text/html',
+    url: urOne,
+
+    success: function(data) {
+      var accId = data.ID;
+      $('body').text('<h2> Account Id: ' + accId + 'lol</h2>')
+      console.log(accId)
+      console.log(hi)
+    }
+
+  })
+
+
+
+})
+
+$(window).keydown( function(event){
+  if(event.keyCode == 13) {
+    event.preventDefault();
+    return false;
+  }
+})
+</script>
+
+
+
+
+
+
+</body>
+</html>

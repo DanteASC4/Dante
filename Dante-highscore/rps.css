@@ -1,0 +1,44 @@
+.imgContainer{
+    float: left;
+    text-align: center;
+    padding-top: 215px;
+    padding-right: 15px;
+}
+body{
+    background-image: url("http://s3.amazonaws.com/wootsaleimages/Rock,_Paper,_Scissor_Holdm7mDetail.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: lightblue;
+}
+
+p1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-shadow: 5px 5px blue;
+}
+
+.results{
+    float: left;
+    width: 10%;
+    height: 20%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    text-shadow: 3px 3px blue;
+}
+
+h1{
+    text-align: center;
+    color: #f78011;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    text-shadow: 5px 5px red;
+}
+
+.Stuff{
+    color: #f2801f;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    text-shadow: 5px 5px red;
+    width: 410px;
+    border: 10px solid orangered;
+}

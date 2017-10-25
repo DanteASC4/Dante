@@ -1,0 +1,11 @@
+.results-pane {
+  font-size:45px;
+  text-align:center;
+  font-family:Bevan;
+  text-shadow:1px 1px 0px #eee;
+  margin:30px auto;
+  width:800px;
+  border-radius:20px;
+  color: black;
+  border:5px solid black;
+}

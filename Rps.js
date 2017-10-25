@@ -4,7 +4,12 @@
 //Also the user must type their choice in all lowercase
 //I may add more to this in the future, but I'll leave it like this for now
 
-var playerChoice = prompt("Choose rock, paper, or scissors! Make sure to type in lowercase.");
+
+
+
+
+
+
 
 var cpuChoice = cpuFunc
 var cpuPaper = "paper"
@@ -23,6 +28,24 @@ if (cpuFunc == 1) {
 }
 
 console.log("Compter chose " + cpuChoice);
+
+
+$("#rock", "#paper", "#scissors").click(function(){
+
+var playerChoice;
+
+if(  $("rock").click() == true){
+  playerChoice = "rock"
+}
+else if ($("paper").click() == true) {
+  playerChoice = "paper"
+}
+else if ($("scissors").click() == true) {
+  playerChoice = "scissors"
+}
+
+console.log(playerChoice);
+
 
 if (playerChoice == "rock") {
   if (cpuChoice == cpuPaper) {
@@ -51,3 +74,4 @@ if (playerChoice == "scissors") {
     console.log("Draw!")
   }
 }
+})
